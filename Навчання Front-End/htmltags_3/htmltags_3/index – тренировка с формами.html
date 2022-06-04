@@ -1,0 +1,98 @@
+<!-- Сообщаем браузеру, как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ua">
+	<!--Заголовок страницы, контейнер для других важных данных (не отображается)-->
+	<head>
+		<!--Заголовок страницы в браузере-->
+	<title>Знакомство с HTML-тегами. Часть №3 (Формы) </title>
+	<!--Кодировка страницы-->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	</head>
+	<!--Отображаемое тело страницы-->
+	<body>
+		<form action="#" method="post" enctype="multipart/form-data">
+			<div>
+				<h1>Опитування</h1>
+				<h2>Нутриціологічна анкета танцюриста</h2>
+			</div>
+			<div>
+				<p>Прізвище, ім'я, побатькові </p>
+				<input placeholder="ПІБ" tabindex="1" name="username" type="text" />
+			</div>
+			<div>
+				<p>Вік</p>
+				<input placeholder="Вік" tabindex="2" name="age" type="tel" />
+			</div>
+			<div>
+				<p>Стать</p>
+			</div>
+			<div>
+				<input tabindex="3" type="radio" name="gender" value="male" /> Чоловіча
+			</div>
+			<div>
+				<input tabindex="3" type="radio" name="gender" value="female" /> Жіноча
+			</div>
+			<div>
+				<p>Які тренування ти відвідуєш?</p>
+			</div>
+			<div>
+				<input tabindex="4" checked type="checkbox" name="dance" value="yes" /> Танцювальні
+			</div>
+			<div>
+				<input tabindex="5" checked type="checkbox" name="stretching" value="yes" /> Стрейчинг
+			</div>
+			<div>
+				<input tabindex="6" checked type="checkbox" name="functional" value="yes" /> Силові тренування
+			</div>
+			<div>
+				<input tabindex="7" type="checkbox" name="yoga" value="yes" /> Йога
+			</div>
+			<div>
+				<input tabindex="8" type="checkbox" name="pilates" value="yes" /> Пілатес
+			</div>
+			<div>
+				<input tabindex="9" type="checkbox" name="other" value="yes" /> Інші 
+				<input placeholder="Вкажи, які саме" tabindex="10" name="othertrain" type="text">
+			</div>
+			<div>
+				<p>Ти харчуєшся:</p>
+				<select tabindex="11" multiple name="whereeat">
+					<option selected value="home">Вдома</option>
+					<option value="fastfood">В закладах швидкого харчування</option>
+					<option value="culinary">В кулінаріях</option>
+					<option value="snacks">Їм переважно снеки</option>
+				</select>
+			</div>
+			<div>
+				<p>Ти вважаєш своє харчування збалансованим?</p>
+				<select tabindex="12" name="balanced">
+					<option value="yes">Так</option>
+					<option value="no">Ні</option>
+					<option selected value="partly">Частково</option>
+				</select>
+			</div>
+			<div>
+				<p>Ти задоволений(на) своїм тілом - його зовнішнім виглядом, силою, витривалістю, енергійністю? Чи хотілося б тобі щось змінити? Що саме?</p>
+				<textarea tabindex="13" name="satisfaction" ></textarea>
+			</div>
+			<div>
+				<p>Прикріпи фото своїх типових прийомів їжі</p>
+				<p><i>Сніданок</i>
+				<input tabindex="14" type="file" name="breakfast">
+				<i>Обід</i>
+				<input tabindex="15" type="file" name="lunch">
+				</p>
+				<p><i>Вечеря</i>
+				<input tabindex="16" type="file" name="dinner">
+				<i>Снеки</i>
+				<input tabindex="17" type="file" name="snack">
+				</p>
+			</div>
+			<div>
+				<p>Ти чесно відповів(ла) на всі питання? Тоді тисни <b>Відправити</b></p>
+				<button tabindex="18" type="submit">Відправити</button>
+			</div>
+		</form>
+	</body>
+</html>

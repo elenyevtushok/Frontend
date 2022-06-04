@@ -1,0 +1,290 @@
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*Это вся оболочка, нам нужно, чтобы она была на всю высоту экрана.*/
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;/*задаем, чтобы ничего не вылезло за экран*/
+
+	display: flex;/*делаем из wrapper flex-контейнер, чтобы прижать 
+	footer к низу экрана даже тогда, когда контаента немного*/
+	flex-direction: column;/*выстраиваем в колонку flex-элементы*/
+}
+
+/*У контента есть своя ширина - ширина контентной части. Потом остаются поля,
+их размер зависит от размеров монитора
+Margin позволяет выровнять блочный элемент по центру экрана*/
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+/*Позволяем flex-элементу content увеличиваться - 
+тогда он займет всю свободную область экрана и прижмет footer к низу экрана.*/
+.content {
+	flex: 1 1 auto;
+}
+
+.hi {
+	background-color: #445162; /*Цвет фона первого контейнера*/
+	padding: 50px 0; /*Отступы элементов от краев контейнера*/
+}
+/*Делаем первый контейнер flex-элементом*/
+.hi__row {
+	display: flex;
+	justify-content: space-between; /*Поскольку в контейнере 2 flex-элемента,
+	и они расположены по краям контейнера с пространством между ними,
+	применяем это свойство*/
+}
+.hi__body {
+	color: #fff; /*Общее свойство заголовка и списка, можно прописать его здесь,
+	чтобы не прописывать дважды*/
+	padding: 0 30px 0 0; /*Если в списке будет больше текста, он может залезть
+	на картинку. Чтобы такого не было, задаем padding*/
+}
+.hi__title {
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+	font-size: 60px;
+	margin: 0 0 38px 0; /*Отступ заголовка вниз*/
+}
+.hi__list {}
+
+/*Обращаемся к каждому элементу списка, задаем стили текста*/
+.hi__list li{
+	background: url('../img/icons/icon.png') 0 1px no-repeat;/*Задаем 1px, чтобы галочка была слева сверху*/
+	text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+	font-size: 20px;
+	line-height: 22px;/*Междустрочный интервал*/
+	padding: 0 0 0 36px; /*Отступ текста слева, чтобы его посчитать,
+	                      берем ширину галочки + ширина между текстом и галочкой*/
+	margin: 0 0 15px 0; /*Отступ элементов списка вниз*/
+}
+/*Но для последнего элемента списка убираем отступ вниз,
+чтобы не увеличивать высоту контейнера*/
+.hi__list li:last-child{
+	margin: 0;
+}
+.hi__image {}
+
+/*Задаем стиль текста всех заголовков (отступы здесь не применяем)*/
+.title {
+	font-size: 30px;
+	line-height: 36px;
+	color: #445161;
+}
+/*Здесь задаем внутренние отступы для контента во флекс-контейнере*/
+.what {
+	padding: 50px 0;
+}
+.container {}
+/*Это наш флекс-контейнер*/
+.what__row {
+	display: flex;
+}
+/*Запрещаем картинке увеличиваться, уменьшаться и задаем конкретную ширину в рх*/
+.what__image {
+	flex: 0 0 430px;
+}
+/*Так картинка не будет больше, чем 430рх, даже если поменять картинку на большую*/
+.what__image img{
+	max-width: 100%;
+}
+/*Элементу с текстом разрешаем увеличиваться и уменьшаться*/
+.what__body {
+	flex: 1 1 auto;
+	/*Это отступ текста от картинки*/
+	padding: 0 0 0 38px;
+}
+/*Таким образом мы зафиксировали блок с картинкой. А блок с текстом может
+менять свой размер в зависимости от наполнения*/
+/*Здесь применяем отступы для заголовка - конкретно для каждого отдельно*/
+.what__title {
+	margin: 0 0 33px 0;
+}
+
+.what__text {}
+
+.what__text p{
+	/*Отступ между абзацами (чтобы померять, рисуем прямоугольник и смотрим высоту*/
+	margin: 0 0 25px 0;
+	/*Задаем стили текста*/
+	color: #333333;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.columns {
+	background-color: #f5f5f5; /*Цвет фона для всего блока*/
+	padding: 50px 0 20px 0; /*Отступ всего контента от краев флекс-контейнера.
+	В классе .columns__column задан margin: 0 0 30px 0; - Отступ колонок вниз. 
+	Но здесь у нас уже есть отступ вниз, поэтому 50-30, чтобы получился остаток*/
+}
+.container {}
+/*Задаем отступы для заголовка конкретно для данного блока*/
+.columns__title {
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+.columns__row {
+	display: flex; /*Превращаем во флекс-контейнер*/
+	flex-wrap: wrap;/*Позволяем колонкам переносится во вторую строку 
+	                 (иначе они будут все 4 в ряд, а нам надо 2х2)*/
+	margin: 0 -8px;/*Чтобы был отступ между 2-мя колонками посредине, 
+	                 берем нужный отступ (16рх), делим на 2 и задаем ему 
+	                 отрицательное значение margin. Колонки раздвинутся между собой*/
+}
+.columns__column {
+	padding: 0 8px;/*Чтобы был отступ между 2-мя колонками посредине, 
+	                 берем нужный отступ (16рх), делим на 2 и задаем ему 
+	                 отрицательное значение margin и положительное значение padding.
+	                 Колонки раздвинутся между собой*/
+	flex:0 1 50%;/*Запрещаем колонке увеличиваться, позволяем уменьшаться 
+	              и задаем ширину 50% (в половину флекс-контейнера)*/
+	margin: 0 0 30px 0; /*Отступ колонок вниз*/
+}
+.columns__item {}
+.item {}
+.item__row {
+	display: flex;/*Превращаем во флекс-контейнер*/
+}
+/*Задаем флекс-элементу, в котором находится картинка, фиксированный размер*/
+.item__image {
+	flex: 0 0 200px;
+}
+/*Позволяем флекс-элементу, в котором находится текст, увеличиваться и уменьшаться*/
+.item__body {
+	flex: 1 1 auto;
+	padding: 0 0 0 15px; /*Задаем отступ текста от картинки*/
+}
+/*Задаем стили заголовка текста*/
+.item__title {
+	color: #445161;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 0 0 13px 0; /*Отступ вниз от заголовка до текста*/
+}
+/*Задаем стили текста*/
+.item__text {
+	color: #333333;
+	font-size: 16px;
+	line-height: 24px;
+}
+/*Стандартные отступы содержимого от внутренних краев контейнера*/
+.vertical {
+	padding: 50px 0;
+}
+.vertical__title {
+	text-align: center;
+	/*Задаем отступ заголовка от карточек (от верха уже есть паддинг)*/
+	margin: 0 0 30px 0;
+}
+.vertical__body {
+	max-width: 990px;/*Задаем ширину блока с карточками*/
+	margin: 0px auto;
+}
+.vertical__row {
+	/*Превращаем во флекс-контейнер*/
+	display: flex;
+	margin: 0 -22.5px; /*Задаем 1/2 расстояния между карточками со знаком -,
+	                     чтобы они разлиплись между собой*/
+}
+.vertical__column {
+	padding: 0 22.5px;/*Задаем 1/2 расстояния между карточками со знаком +,
+	                     чтобы они разлиплись между собой*/
+	flex: 0 1 33.333%;/*Запрещаем колонкам увеличиваться, разрешаем уменьшаться
+	                   и задаем ширину на треть экрана*/
+	display: flex;/*Колонки-карточки превращаем во флекс-контейнер, чтобы
+	               они растянулись и подстроились под высоту самого высокого элемента*/
+}
+/*Так можно поменять порядок карточек с помощью order*/
+.vertical__column_1{
+	align-self: center; /*Так можно выровнять карточки по горизонтальной оси*/
+}
+.vertical__column_2{
+}
+.vertical__column_3{
+	align-self: flex-end;
+}
+
+.vertical__item {
+	/*Задаем стили карточки*/
+	background-color: #445162;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #445162;
+	padding: 0 0 20px 0; /*Отступ кнопки снизу от карточки*/
+	display: flex; /*Сами карточки превращаем во флекс-контейнеры*/
+	flex-direction: column;
+}
+.vertical__subtitle {
+	font-size: 24px;
+	text-transform: uppercase;
+	padding: 12px 0; /*Отступ подзаголовка сверху и снизу*/
+	text-align: center;
+}
+.vertical__label {
+	background-color: #fff;
+	color: #445162;
+	text-align: center;
+	padding: 15px 0;/*Отступ текста на белом фоне сверху и снизу*/
+	font-size: 40px;
+}
+.vertical__text {
+	padding: 20px;/*Отступ текста со всех сторон*/
+	font-size: 14px;
+	line-height: 24px;
+	flex: 1 1 auto;/*Позволяем тексту увеличиваться, чтобы он прижал кнопку вниз*/
+}
+.vertical__text p{
+	margin: 0 0 15px 0;/*Отступ абзаца вниз*/
+}
+.vertical__text p:last-child{
+	margin: 0 0 0px 0;/*Отступ последнего абзаца вниз убираем*/
+}
+.vertical__btn {
+	display: block; /*Делаем кнопку блочным элементом*/
+	height: 40px;
+	background-color: #ffffff;
+	margin: 0 20px; /*Отступ кнопки слева и справа от карточки*/
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	color: #445161;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.footer {
+	background-color: #f5f5f5;
+}
+
+.footer__row {
+	display: flex;
+	height: 65px;/*высота footer*/
+	justify-content: center;/*выровнять текст по горизонтали*/
+	align-items: center;/*выровнять текст по вертикали*/
+}
+/*Применяем стили текста*/
+.footer__text {
+	color: #445162;
+	font-size: 12px;
+	letter-spacing: 0.3px;
+}

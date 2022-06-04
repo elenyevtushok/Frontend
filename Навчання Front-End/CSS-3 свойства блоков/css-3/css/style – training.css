@@ -1,0 +1,85 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin:0;
+	border:0;
+}
+*,*:before,*:after{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 25px;
+	font-size: 14px;
+	font-family: "Arial MT";
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+.leftblock{
+	width: 611px;
+	margin: 53px 619px 33px 50px;
+	border: 1px solid #000;
+}
+.toblock{
+	display: block;
+	margin-left: 50px;
+	border: 1px solid #000;
+}
+.marginleft{
+	margin-left: 50px;
+}
+.higher{
+	margin-top: 32px;
+	margin-left: 50px;
+	min-height: 86px;
+	border: 1px solid #000;
+}
+.toinlineblock{
+	display: inline-block;
+	margin-top: 34px;
+	margin-left: 50px;
+	border: 1px solid #000;
+}
+.toinline{
+	display: inline-block;
+	margin-left: 41px;
+	margin-right: 726px;
+	border: 1px solid #000;
+}
+.toinlineblock2{
+	display: inline-block;
+	width: 503px;
+	text-align: center;
+	margin: 35px 42px 37px 50px;
+	border: 1px solid #000;
+	}
+.paddings{
+	display: block;
+	padding: 48px 0;
+	margin-left: 50px;
+	width: 343px;
+	border: 1px solid #000;
+}

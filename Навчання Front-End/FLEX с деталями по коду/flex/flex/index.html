@@ -1,0 +1,212 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>FLEXBOX</title>
+		<!-- Адаптив -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css"/>
+		<!-- Кодировка страницы -->
+		<meta charset="UTF-8">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<!--Оболочка всей страницы -->
+		<div class="wrapper">
+			<!--Div с контентной частью -->
+			<div class="content">
+				<!--Создаем первый блок -->
+				<div class="hi">
+					<!--Контейнер ограничит ширину контентной части -->
+					<div class="container">
+						<!--Создаем флекс-контейнер -->
+						<div class="hi__row">
+							<!--Первый флекс-элемент -->
+							<div class="hi__body">
+								<!--Заголовок - часть первого флекс-элемента -->
+								<div class="hi__title">Привет, друг!</div>
+								<!--Список - часть первого флекс-элемента -->
+								<ul class="hi__list">
+									<li>У тебя все получится!</li>
+									<li>Никогда не сдавайся!</li>
+									<li>Сегодня ты уже знаешь больше чем вчера!</li>
+									<li>Спасибо тебе за поддержку!</li>
+								</ul>
+							</div>
+							<!--Второй флекс-элемент (картинка) -->
+							<div class="hi__image">
+								<img src="img/image.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Создаем второй блок -->
+				<div class="what">
+					<!--Контейнер ограничит ширину контентной части -->
+					<div class="container">
+						<!--Создаем флекс-контейнер -->
+						<div class="what__row">
+							<!--Первый флекс-элемент (картинка)-->
+							<div class="what__image">
+								<img src="img/image_2.jpg" alt="">
+							</div>
+							<!--Второй флекс-элемент -->
+							<div class="what__body">
+								<!--Заголовок - часть второго флекс-элемента -->
+								<div class="what__title title"> <!-- У нас еще есть такие же title,
+								поэтому создаем отдельный класс для title -->
+									Что такое FlexBox?
+								</div>
+								<!--Список - часть второго флекс-элемента -->
+								<div class="what__text">
+									<p>Flexbox - это целый модуль, содержащий в себе набор свойств и их значений как для родителя flex-контейнера так и для его дочерних элементов flex-элементов.</p>
+									<p>Основным преимуществом гибкой FLEX разметки является возможность изменять ширину/высоту пространство вокруг и порядок flex-элементов, для того чтобы наилучшим образом заполнить доступное пространство flex-контейнера</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Создаем третий блок. Здесь имеем флекс во флексе - во флекс-контейнере 
+				находится 2 колонки, в каждой колонке еще по 2 флекс-контейнера, внутри каждого
+				по 2 флекс-элемента -->
+				<div class="columns">
+					<!--Контейнер ограничит ширину контентной части -->
+					<div class="container">
+						<!--Класс columns__title нам нужен, чтобы задать отступы для заголовка title
+							а класс title со стилями текста у нас уже готов с предыдущего блока-->
+						<div class="columns__title title">Колонки с flex-контейнерами</div>
+						<!--Создаем главный флекс-контейнер -->
+						<div class="columns__row">
+							<!--Создаем 4 колонки -->
+							<!--1 колонка-->
+							<div class="columns__column">
+								<!--Создаем флекс-элемент, который также будет флекс-контейнером -->
+								<div class="columns__item item">
+									<!--Создаем флекс-контейнер  внутри контейнера(картинка с текстом)-->
+									<div class="item__row">
+										<!--Флекс-элемент №1 - картинка -->
+										<div class="item__image"><img src="img/image_3.jpg" alt=""></div>
+										<!--Флекс-элемент №2 - текст -->
+										<div class="item__body">
+											<!--Заголовок-->
+											<div class="item__title">The description for the image</div>
+											<!--Сам текст-->
+											<div class="item__text">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--2 колонка-->
+							<div class="columns__column">
+								<div class="columns__item item">
+									<div class="item__row">
+										<div class="item__image">
+											<img src="img/image_3.jpg" alt="">
+										</div>
+										<div class="item__body">
+											<div class="item__title">The description for the image</div>
+											<div class="item__text">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--3 колонка-->
+							<div class="columns__column">
+								<div class="columns__item item">
+									<div class="item__row">
+										<div class="item__image">
+											<img src="img/image_3.jpg" alt="">
+										</div>
+										<div class="item__body">
+											<div class="item__title">The description for the image</div>
+											<div class="item__text">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--4 колонка-->
+							<div class="columns__column">
+								<div class="columns__item item">
+									<div class="item__row">
+										<div class="item__image">
+											<img src="img/image_3.jpg" alt="">
+										</div>
+										<div class="item__body">
+											<div class="item__title">The description for the image</div>
+											<div class="item__text">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Создаем четвертый блок -->
+				<div class="vertical">
+					<!--Контейнер ограничит ширину контентной части -->
+					<div class="container">
+						<!--Класс vertical__title нам нужен, чтобы задать отступы для заголовка title
+							а класс title со стилями текста у нас уже готов-->
+						<div class="vertical__title title">Вертикальное выравнивание</div>
+						<!--Создаем еще один div с классом body, чтобы еще больше ограничить ширину блока,
+						так как этот блок уже, чем остальные -->
+						<div class="vertical__body">
+							<!--Создаем флекс-контейнер -->
+							<div class="vertical__row">
+								<!--Создаем первую колонку -->
+								<div class="vertical__column vertical__column_1">
+									<!--Создаем всю карточку -->
+									<div class="vertical__item">
+										<!--Подзаголовок -->
+										<div class="vertical__subtitle">буду рад</div>
+										<!--Текст на белом фоне -->
+										<div class="vertical__label">подписке</div>
+										<!--Сам текст карточки -->
+										<div class="vertical__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur.</div>
+										<!--Кнопка -->
+										<a href="" class="vertical__btn">подписаться</a>
+									</div>
+								</div>
+								<div class="vertical__column vertical__column_2">
+									<div class="vertical__item">
+										<div class="vertical__subtitle">буду рад</div>
+										<div class="vertical__label">лайку</div>
+										<div class="vertical__text">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur voluptatibus atque et itaque, hic, deleniti. Sunt commodi tempora voluptatum dolorum.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tenetur fugit vel, eligendi illum, placeat quo vero reiciendis consectetur tempora voluptatum dolorum.</p>
+										</div>
+										<a href="" class="vertical__btn">лайк</a>
+									</div>
+								</div>
+								<div class="vertical__column vertical__column_3">
+									<div class="vertical__item">
+										<div class="vertical__subtitle">буду рад</div>
+										<div class="vertical__label">комментарию</div>
+										<div class="vertical__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+										</div>
+										<a href="" class="vertical__btn">комментировать</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!--Div для футера-->
+				<footer class="footer">
+					<!--Закрываем контент в контейнер -->
+					<div class="container">
+						<!--Создаем флекс - контейнер -->
+						<div class="footer__row">
+							<!--Текст во флекс-контейнере -->
+							<div class="footer__text">Фрилансер по жизни 2019</div>
+						</div>
+					</div>
+				</footer>
+		</div>
+	</body>
+</html>

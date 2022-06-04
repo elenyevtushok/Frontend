@@ -1,0 +1,128 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin:0;
+	border:0;
+}
+*,*:before,*:after{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	width: 1440px;
+	height: 1700px;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;} 
+
+body{
+	background-color: #e8e8e8;
+	background-image: url('../img/Ellipse_1_copy.png');
+	background-position: 160px 130px;
+	background-size: 1190px 1064px;
+	background-repeat: no-repeat;
+
+}
+
+.heading{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	color: #273d46;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2.8px;
+	line-height: 40px;
+	margin-top: 168px;
+}
+.upperimage{
+	font-family: "Times New Roman PSMT";
+	font-size: 36px;
+	color: #273d46;
+	text-align: center;
+	line-height: 50px;
+}
+.manimage{
+	margin: 77px 310px 97px 289px;
+	border: 10px solid #ffffff;
+	box-shadow: 0 15px 65px rgba(15, 16, 16, 0.15);
+
+}
+.underimage{
+	font-family: "Times New Roman PSMT";
+	font-size: 24px;
+	color: #273d46;
+	opacity: 0.8;
+	line-height: 40px;
+	margin: 97px 370px 64px 334px;
+}
+
+.toblock{
+	display: inline-block;
+	margin-top: 50px;
+}
+
+.list{
+	margin: 0 0 50px 0;
+}
+
+.list li{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
+	color: #273d46;
+	line-height: 36px;
+
+	background: url("../img/icons/check_icon.png") 331px no-repeat;
+	padding: 0 0 0 364px;
+}
+li.shadow{
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+li.italic {
+	color: #80b7b3;
+	font-style: italic;
+}
+li.bold {
+	font-weight: bold;
+}
+li.line-through {
+	text-decoration: line-through;
+}
+
+
+.onbutton{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 2.8px;
+	background-color: #80b7b3;
+	padding: 17px 59px 17px 30px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 40px;
+	margin-left: 330px;
+	box-shadow: 0 6px 40px rgba(128, 183, 179, 0.54);
+}

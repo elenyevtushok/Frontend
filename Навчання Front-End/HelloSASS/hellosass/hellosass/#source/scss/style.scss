@@ -1,0 +1,70 @@
+//Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+//font size for list and span
+$fz:30px;
+//line-height 
+$lh:30px;
+//color for paragraph
+$color_1: #660066;
+//color for hover
+$color_hover: #FF0066;
+//template for links
+%link-style{
+	border-style: 5px solid violet;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px 5px #cc80ff;
+}
+@mixin fontz($f,$w,$c){
+	font-size: $f;
+	font-weight: $w;
+	color: $c;
+}
+
+.block{
+	background-color:  #99e5ff;
+	color: $color_1;
+	padding: 30px;
+	line-height: $lh;
+	font-weight: bold;
+	.block__text{
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		background-color: #e6faff;
+		font-weight: normal;
+			}
+		span{
+			color: #000066;
+			text-decoration: underline;
+			font-style: oblique;
+			font-weight: normal;
+			font-size: $fz;
+			&:hover{
+				color:$color_hover;
+				text-decoration: none;
+			}
+			}
+		li{
+			background-color: #998fff;
+			font-size: $fz;
+			line-height: $lh;
+			color: $color_1;
+			&:before{
+				content: '*';
+							}
+			&:after{
+				content: '*';
+			}
+			}
+
+}
+.link{
+	color: $color_1;
+	text-decoration: underline;
+	font-size: $fz;
+	@extend %link-style;
+	}
+
+.link-2{
+	@include fontz(35px, 500px, green);
+	@extend %link-style;
+}
